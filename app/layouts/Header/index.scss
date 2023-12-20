@@ -1,0 +1,30 @@
+.header {
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-menu {
+            display: flex;
+
+            li {
+                list-style: none;
+
+                a {
+                    padding: 0 20px;
+                    text-decoration: none;
+                    color: #1f1534;
+                    font-size: 18px;
+                    font-weight: 400;
+                    opacity: 0.5;
+
+                    &:hover {
+                        color: #1f1534;
+                        font-weight: 700;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

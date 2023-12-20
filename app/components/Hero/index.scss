@@ -1,0 +1,40 @@
+.hero {
+    margin-top: -120px;
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-menu {
+            &-title {
+                max-width: 440px;
+                width: 100%;
+                color: #000;
+                font-size: 48px;
+                font-weight: 700;
+                line-height: 56px;
+                margin-bottom: 25px;
+            }
+
+            &-description {
+                max-width: 440px;
+                width: 100%;
+                color: #7d7987;
+                font-size: 21px;
+                font-weight: 300;
+                line-height: 32px;
+                margin-bottom: 50px;
+            }
+
+            &-button {
+                color: #fff;
+                font-size: 18px;
+                font-weight: 700;
+                padding: 20px 40px;
+                border-radius: 55px;
+                background: #458ff6;
+                border: none;
+            }
+        }
+    }
+}
