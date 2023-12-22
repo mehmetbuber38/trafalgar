@@ -50,4 +50,31 @@ body {
             }
         }
     }
+
+    &-article {
+        margin-top: 222px;
+        &__body {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 70px;
+        }
+
+        &__button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 25px;
+
+            button {
+                color: #458ff6;
+                font-size: 18px;
+                font-weight: 700;
+                border-radius: 55px;
+                border: 1px solid #458ff6;
+                padding: 15px 60px;
+                background-color: #fff;
+            }
+        }
+    }
 }

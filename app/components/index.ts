@@ -1,4 +1,6 @@
 export { default as Hero } from './Hero'
-export { default as OurServices } from './OurServices'
+export { default as SubTitle } from './SubTitle'
 export { default as OurServicesCard } from './OurServicesCard'
 export { default as Providers } from './Providers'
+export { default as Download } from './Download'
+export { default as Article } from './Article'

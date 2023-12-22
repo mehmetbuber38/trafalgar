@@ -1,8 +1,34 @@
 import React from "react";
 import Image from "next/image";
-import { Header } from "./layouts";
-import { Hero, OurServices, OurServicesCard, Providers } from "./components";
+import { Header, Footer } from "./layouts";
+import {
+  Hero,
+  SubTitle,
+  OurServicesCard,
+  Providers,
+  Download,
+  Article,
+} from "./components";
 import "./main.scss";
+import { Link } from "react-router-dom";
+
+const footerCompanyData = [
+  {
+    company: ["About", "Testimonials", "Find a doctor", "Apps"],
+  },
+];
+
+const footerRegionData = [
+  {
+    region: ["Indonesia", "Singapore", "Hongkong", "Canada"],
+  },
+];
+
+const footerHelpData = [
+  {
+    help: ["Help center", "Contact support", "Instructions", "How it work"],
+  },
+];
 
 function Homepage() {
   return (
@@ -24,7 +50,7 @@ function Homepage() {
         </section>
 
         <section className="section-ourServices">
-          <OurServices
+          <SubTitle
             title="Our services"
             description="We provide to you the best choiches for you. 
             Adjust it to your health needs and make sure your undergo
@@ -86,7 +112,68 @@ function Homepage() {
             buttonText="Learn more"
           />
         </section>
+
+        <section className="section-download">
+          <Download
+            title="Download our mobile apps"
+            description="Our dedicated patient engagement app and 
+            web portal allow you to access information instantaneously (no tedeous form, long calls, 
+            or administrative hassle) and securely"
+            buttonText="Download"
+            url="/download-image.png"
+          />
+        </section>
+
+        <section className="section-article">
+          <SubTitle title="Check out our latest article" />
+
+          <div className="container">
+            <div className="section-article__body">
+              <Article
+                url="/image1.png"
+                cardTitle="Disease detection, check 
+            up in the laboratory"
+                description="In this case, the role of the health laboratory is very important to do
+          a disease detection..."
+                buttonText="Read more"
+              />
+              <Article
+                url="/image2.png"
+                cardTitle="Disease detection, check up"
+                description="In this case, the role of the health laboratory is very important to do
+          a disease detection..."
+                buttonText="Read more"
+              />
+              <Article
+                url="/image3.png"
+                cardTitle="Disease detection, check up"
+                description="In this case, the role of the health laboratory is very important to do
+          a disease detection..."
+                buttonText="Read more"
+              />
+            </div>
+          </div>
+
+          <div className="section-article__button">
+            <button>Wiev all</button>
+          </div>
+        </section>
       </main>
+
+      <footer>
+        <Footer
+          title="Trafalgar"
+          description="Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online 
+        for everyone"
+          links="©Trafalgar PTY LTD 2020. All rights reserved"
+          companyTitle="Company"
+          company={footerCompanyData[0].company}
+          regionTitle="Region"
+          region={footerRegionData[0].region}
+          helpTitle="Help"
+          help={footerHelpData[0].help}
+        />
+      </footer>
     </>
   );
 }
