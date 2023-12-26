@@ -1,11 +1,20 @@
 .footer {
     background: linear-gradient(183deg, #67c3f3 -8.57%, #5a98f2 82.96%);
     margin-top: 200px;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 50px;
+    }
     &__body {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 124px 0 113px;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column-reverse;
+            padding: 60px 20px;
+        }
     }
 
     &__content {
@@ -47,8 +56,16 @@
     &__menu {
         display: flex;
 
+        @media screen and (max-width: 768px) {
+            margin-bottom: 50px;
+        }
+
         .list {
             margin-right: 150px;
+
+            @media screen and (max-width: 768px) {
+                margin-right: 25px;
+            }
 
             &:last-child {
                 margin-right: 0;

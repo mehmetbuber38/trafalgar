@@ -8,6 +8,7 @@ import {
   Providers,
   Download,
   Article,
+  Costumer,
 } from "./components";
 import "./main.scss";
 import { Link } from "react-router-dom";
@@ -37,7 +38,7 @@ function Homepage() {
 
       <main className="">
         <section className="section-hero">
-          <Image src="/element.png" alt="element" width={130} height={120} />
+          <Image className="element" src="/element.png" alt="element" width={130} height={120} />
           <Hero
             title="Virtual healthcare 
             for you"
@@ -124,11 +125,54 @@ function Homepage() {
           />
         </section>
 
+        <section className="section-costumer">
+          <div className="container">
+            <div className="section-costumer__body">
+              <Image
+                className="section-costumer__body-element1"
+                src="/group.png"
+                alt="element"
+                width={130}
+                height={120}
+              />
+              <Image
+                className="section-costumer__body-element2"
+                src="/element.png"
+                alt="element"
+                width={130}
+                height={120}
+              />
+              <SubTitle title="What our customer are saying" />
+              <Costumer
+                url="/customer-image.png"
+                title="Edward Newgate"
+                subTitle="Founder Circle"
+                description="“Our dedicated patient engagement app and 
+                web portal allow you to access information instantaneously (no tedeous form, long calls, 
+                or administrative hassle) and securely”"
+              />
+            </div>
+          </div>
+        </section>
+
         <section className="section-article">
           <SubTitle title="Check out our latest article" />
-
+          <Image
+            className="section-article-vector"
+            src="/vector2.png"
+            alt="element"
+            width={578}
+            height={557}
+          />
           <div className="container">
             <div className="section-article__body">
+              <Image
+                className="section-article__body-element1"
+                src="/element.png"
+                alt="element"
+                width={130}
+                height={120}
+              />
               <Article
                 url="/image1.png"
                 cardTitle="Disease detection, check 
