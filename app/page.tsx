@@ -11,24 +11,82 @@ import {
   Costumer,
 } from "./components";
 import "./main.scss";
-import { Link } from "react-router-dom";
 
-const footerCompanyData = [
+const footerData = [
   {
+    companyTitle: "Company",
     company: ["About", "Testimonials", "Find a doctor", "Apps"],
   },
-];
-
-const footerRegionData = [
   {
+    regionTitle: "Region",
     region: ["Indonesia", "Singapore", "Hongkong", "Canada"],
   },
-];
-
-const footerHelpData = [
   {
+    helpTitle: "Help",
     help: ["Help center", "Contact support", "Instructions", "How it work"],
   },
+];
+
+const ourServicesData = [
+  {
+    title: "Search doctor",
+    description:
+      "Choose your doctor from thousands of specialist, general, and trusted hospitals",
+    url: "/search.png",
+  },
+  {
+    title: "Online pharmacy",
+    description:
+      "Buy  your medicines with our mobile application with a simple delivery system",
+    url: "/pharmacy.png",
+  },
+  {
+    title: "Consultation",
+    description:
+      "Free consultation with our trusted doctors and get the best recomendations",
+    url: "/consultation.png",
+  },
+  {
+    title: "Details Info",
+    description:
+      "Free consultation with our trusted doctors and get the best recomendations",
+    url: "/details.png",
+  },
+  {
+    title: "Emergency care",
+    description: "You can get 24/7 urgent care for yourself or your children",
+    url: "/emergency.png",
+  },
+  {
+    title: "Tracking",
+    description: "Track and save your medical history and health data",
+    url: "/tracking.png",
+  },
+];
+
+const articleData = [
+  {
+    url: "/image1.png",
+    cardTitle: "Disease detection, check up in the laboratory",
+    description:
+      "In this case, the role of the health laboratory is very important to do a disease detection...",
+    buttonText: "Read more",
+  },
+  {
+    url: "/image2.png",
+    cardTitle: "Disease detection, check up in the laboratory",
+    description:
+      "In this case, the role of the health laboratory is very important to do a disease detection...",
+    buttonText: "Read more",
+  },
+  {
+    url: "/image2.png",
+    cardTitle: "Disease detection, check up in the laboratory",
+    description:
+      "In this case, the role of the health laboratory is very important to do a disease detection...",
+    buttonText: "Read more",
+  },
+  
 ];
 
 function Homepage() {
@@ -38,7 +96,13 @@ function Homepage() {
 
       <main className="">
         <section className="section-hero">
-          <Image className="element" src="/element.png" alt="element" width={130} height={120} />
+          <Image
+            className="element"
+            src="/element.png"
+            alt="element"
+            width={130}
+            height={120}
+          />
           <Hero
             title="Virtual healthcare 
             for you"
@@ -65,37 +129,14 @@ function Homepage() {
 
           <div className="container">
             <div className="section-ourServices__body">
-              <OurServicesCard
-                url="/search.png"
-                title="Search doctor"
-                description="Choose your doctor from thousands of specialist, general, and trusted hospitals"
-              />
-              <OurServicesCard
-                url="/pharmacy.png"
-                title="Online pharmacy"
-                description="Buy  your medicines with our mobile application with a simple delivery system"
-              />
-              <OurServicesCard
-                url="/consultation.png"
-                title="Consultation"
-                description="Free consultation with our trusted doctors and get the best recomendations"
-              />
-              <OurServicesCard
-                url="/details.png"
-                title="Details info"
-                description="Free consultation with our trusted doctors and get the best recomendations"
-              />
-              <OurServicesCard
-                url="/emergency.png"
-                title="Emergency care"
-                description="You can get 24/7 urgent care for yourself or your children and your
-                lovely family"
-              />
-              <OurServicesCard
-                url="/tracking.png"
-                title="Tracking"
-                description="Track and save your medical history and health data "
-              />
+              {ourServicesData.map((service, index) => (
+                <OurServicesCard
+                  key={index}
+                  title={service.title}
+                  description={service.description}
+                  url={service.url}
+                />
+              ))}
             </div>
           </div>
 
@@ -173,28 +214,16 @@ function Homepage() {
                 width={130}
                 height={120}
               />
-              <Article
-                url="/image1.png"
-                cardTitle="Disease detection, check 
-            up in the laboratory"
-                description="In this case, the role of the health laboratory is very important to do
-          a disease detection..."
-                buttonText="Read more"
-              />
-              <Article
-                url="/image2.png"
-                cardTitle="Disease detection, check up"
-                description="In this case, the role of the health laboratory is very important to do
-          a disease detection..."
-                buttonText="Read more"
-              />
-              <Article
-                url="/image3.png"
-                cardTitle="Disease detection, check up"
-                description="In this case, the role of the health laboratory is very important to do
-          a disease detection..."
-                buttonText="Read more"
-              />
+
+              {articleData.map((article, index) => (
+                <Article
+                  key={index}
+                  url={article.url}
+                  cardTitle={article.cardTitle}
+                  description={article.description}
+                  buttonText={article.buttonText}
+                />
+              ))}
             </div>
           </div>
 
@@ -210,12 +239,12 @@ function Homepage() {
           description="Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online 
         for everyone"
           links="©Trafalgar PTY LTD 2020. All rights reserved"
-          companyTitle="Company"
-          company={footerCompanyData[0].company}
-          regionTitle="Region"
-          region={footerRegionData[0].region}
-          helpTitle="Help"
-          help={footerHelpData[0].help}
+          companyTitle={footerData[0].companyTitle}
+          company={footerData[0].company}
+          regionTitle={footerData[1].regionTitle}
+          region={footerData[1].region}
+          helpTitle={footerData[2].helpTitle}
+          help={footerData[2].help}
         />
       </footer>
     </>

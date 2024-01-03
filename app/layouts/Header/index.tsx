@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import "./index.scss";
+import Link from "next/link";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,19 +32,19 @@ const Header = () => {
           {/* Header Menu */}
           <ul className={`header__body-menu ${isMenuOpen ? "open" : ""}`}>
             <li>
-              <a href="#">Home</a>
+              <Link href="#">Home</Link>
             </li>
             <li>
-              <a href="#">Find a doctor</a>
+              <Link href="#">Find a doctor</Link>
             </li>
             <li>
-              <a href="#">Apps</a>
+              <Link href="#">Apps </Link>
             </li>
             <li>
-              <a href="#">Testimonials</a>
+              <Link href="#">Testimonials</Link>
             </li>
             <li>
-              <a href="#">About us</a>
+              <Link href="#">About us</Link>
             </li>
           </ul>
         </div>

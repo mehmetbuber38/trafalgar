@@ -3,7 +3,6 @@ import "./index.scss";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
 import { ArticleProps } from "./types";
 const Article = ({ buttonText, description, url, cardTitle }: ArticleProps) => {
   return (
